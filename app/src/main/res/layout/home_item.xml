@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:id="@+id/cardview_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/stroke_color"
+        app:strokeWidth="1dp" >
+<RelativeLayout
+    android:layout_width="180dp"
+    android:layout_height="240dp" >
+
+    <ImageView
+        android:id="@+id/newsImage"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rectangle" />
+
+    <TextView
+        android:id="@+id/newsAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newsImage"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/author_jeyn"
+        android:textColor="@color/homeTextColor"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/newsDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/newsAuthor"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:text="@string/description"
+        android:textColor="@color/homeTextColor"
+        android:textSize="14sp" />
+</RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>
